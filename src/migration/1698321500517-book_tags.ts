@@ -7,8 +7,8 @@ export class BookTags1698321500517 implements MigrationInterface {
           --Table Definition
           CREATE TABLE "book_tags"  (
             "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
-            "book_id" uuid NOT NULL,
-            "tag_id" uuid NOT NULL,
+            "bookId" uuid NOT NULL,
+            "tagId" uuid NOT NULL,
             "createdAt" TIMESTAMP NOT NULL DEFAULT now(),
             "updatedAt" TIMESTAMP NOT NULL DEFAULT now(),
             CONSTRAINT "PK_cace4a159ff9f2512dd42373763" PRIMARY KEY ("id"),

@@ -3,7 +3,7 @@ import { DataSource } from "typeorm";
 
 import * as dotenv from "dotenv";
 import { User } from "./entity/User.entity";
-import { Movie } from "./entity/Movies.entity";
+import { SnakeNamingStrategy } from "typeorm-naming-strategies";
 
 dotenv.config();
 
@@ -19,7 +19,8 @@ export const AppDataSource = new DataSource({
   database: DB_DATABASE,
   synchronize: NODE_ENV === "dev" ? false : false,
   logging: NODE_ENV === "dev" ? false : false,
-  entities: [User, Movie],
+  entities: [User],
   migrations: [__dirname + "/migration/*.ts"],
   subscribers: [],
+  namingStrategy: new SnakeNamingStrategy()
 });

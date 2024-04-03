@@ -3,7 +3,6 @@ import * as express from "express";
 import * as dotenv from "dotenv";
 import { Request, Response } from "express";
 import { userRouter } from "./routes/user.routes";
-import { movieRouter } from "./routes/movie.routes";
 import "reflect-metadata";
 import { errorHandler } from "./middleware/errorHandler";
 dotenv.config();
@@ -13,9 +12,8 @@ app.use(express.json());
 const { PORT = 3000 } = process.env;
 app.use(errorHandler);
 app.use("/auth", userRouter);
-app.use("/api", movieRouter);
 
-app.get('/', (req,res) => {
+app.get('/', (req: Request,res: Response) => {
   res.status(200).json({message: "Hello world!"});
 })
 

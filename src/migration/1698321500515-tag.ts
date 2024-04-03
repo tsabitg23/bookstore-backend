@@ -1,21 +1,16 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class User1698321500514 implements MigrationInterface {
+export class Tag1698321500515 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
       ` 
           --Table Definition
-          CREATE TABLE "users"  (
+          CREATE TABLE "tags"  (
             "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
             "name" character varying NOT NULL,
-            "email" character varying NOT NULL,
-            "password" character varying NOT NULL,
-            "salt" character varying NOT NULL,
-            "role"  character varying NOT NULL DEFAULT 'user',
-            "point" DECIMAL(14,2),
             "createdAt" TIMESTAMP NOT NULL DEFAULT now(),
             "updatedAt" TIMESTAMP NOT NULL DEFAULT now(),
-            CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY ("id")
+            CONSTRAINT "PK_cace4a159ff9f2512dd42373761" PRIMARY KEY ("id")
           )
           `
     ),
@@ -23,6 +18,6 @@ export class User1698321500514 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`DROP TABLE "users"`, undefined);
+    await queryRunner.query(`DROP TABLE "tags"`, undefined);
   }
 }

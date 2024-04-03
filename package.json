@@ -23,7 +23,8 @@
     "nodemon": "^3.1.0",
     "pg": "^8.4.0",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "0.3.17"
+    "typeorm": "0.3.17",
+    "typeorm-naming-strategies": "^4.1.0"
   },
   "scripts": {
     "watch": "tsc -w",

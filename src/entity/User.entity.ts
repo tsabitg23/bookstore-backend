@@ -1,16 +1,11 @@
 import {
   Entity,
-  PrimaryGeneratedColumn,
   Column,
-  CreateDateColumn,
-  UpdateDateColumn,
 } from "typeorm";
+import { BaseEntity } from "./Base.entity";
 
 @Entity({ name: "users" })
-export class User {
-  @PrimaryGeneratedColumn("uuid")
-  id: string;
-
+export class User extends BaseEntity{
   @Column({ nullable: false })
   name: string;
 
@@ -22,10 +17,4 @@ export class User {
 
   @Column({ default: "user" })
   role: string;
-
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @UpdateDateColumn()
-  updatedAt: Date;
 }

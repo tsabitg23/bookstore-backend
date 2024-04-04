@@ -20,11 +20,11 @@ export class Book extends BaseEntity{
     @JoinTable({
         name: "book_tags",
         joinColumn: {
-            name: "book",
+            name: "bookId",
             referencedColumnName: "id"
         },
         inverseJoinColumn: {
-            name: "tag",
+            name: "tagId",
             referencedColumnName: "id"
         }
     })

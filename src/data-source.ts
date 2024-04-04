@@ -22,5 +22,5 @@ export const AppDataSource = new DataSource({
   logging: NODE_ENV === "dev" ? false : false,
   entities: [User, Book, Tag],
   migrations: [__dirname + "/migration/*.ts"],
-  subscribers: []
+  subscribers: [],
 });

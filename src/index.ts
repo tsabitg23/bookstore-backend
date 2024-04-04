@@ -1,18 +1,22 @@
 import { AppDataSource } from "./data-source";
 import * as express from "express";
+import * as cors from 'cors';
 import * as dotenv from "dotenv";
 const createError  = require('http-errors');
 import { Request, Response } from "express";
-import { userRouter } from "./routes/user.routes";
+import { userRouter } from "./modules/user/user.routes";
 import "reflect-metadata";
 import { errorHandler } from "./middleware/errorHandler";
-import { bookRouter } from "./routes/book.routes";
+import { bookRouter } from "./modules/book/book.routes";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const { PORT = 3000 } = process.env;
+
+app.use(cors())
+
 
 app.use("/auth", userRouter);
 app.use("/api", bookRouter);

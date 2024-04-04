@@ -2,7 +2,7 @@ import {
   Entity,
   Column,
 } from "typeorm";
-import { BaseEntity } from "./Base.entity";
+import { BaseEntity } from "../../helpers/Base.entity";
 
 @Entity({ name: "users" })
 export class User extends BaseEntity{

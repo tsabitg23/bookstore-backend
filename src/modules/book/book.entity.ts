@@ -1,6 +1,6 @@
 import { Column, Entity, JoinTable, ManyToMany } from "typeorm";
-import { BaseEntity } from "./Base.entity";
-import { Tag } from "./Tag.entity";
+import { BaseEntity } from "../../helpers/Base.entity";
+import { Tag } from "../tag/Tag.entity";
 
 @Entity({ name: "books" })
 export class Book extends BaseEntity{

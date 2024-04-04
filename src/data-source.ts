@@ -2,9 +2,9 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 
 import * as dotenv from "dotenv";
-import { User } from "./entity/User.entity";
-import { Book } from "./entity/Book.entity";
-import { Tag } from "./entity/Tag.entity";
+import { User } from "./modules/user/User.entity";
+import { Book } from "./modules/book/book.entity";
+import { Tag } from "./modules/tag/Tag.entity";
 
 dotenv.config();
 

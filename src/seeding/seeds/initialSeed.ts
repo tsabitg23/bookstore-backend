@@ -1,7 +1,7 @@
 import { Factory, Seeder } from "typeorm-seeding";
 import { Connection } from "typeorm";
-import { Tag } from "../../entity/Tag.entity";
-import { Book } from "../../entity/Book.entity";
+import { Tag } from "../../modules/tag/Tag.entity";
+import { Book } from "../../modules/book/book.entity";
 
 
 export default class InitialDatabaseSeed implements Seeder {

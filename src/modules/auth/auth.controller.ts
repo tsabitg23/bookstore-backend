@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { AppDataSource } from "../data-source";
-import { User } from "../entity/User.entity";
-import { encrypt } from "../helpers/encrypt";
+import { AppDataSource } from "../../data-source";
+import { User } from "../user/User.entity";
+import { encrypt } from "../../helpers/encrypt";
 
 export class AuthController {
   static async login(req: Request, res: Response) {

@@ -1,6 +1,6 @@
 import { faker  as Faker} from '@faker-js/faker';
 import { define } from "typeorm-seeding";
-import { Book } from "../../entity/Book.entity";
+import { Book } from "../../modules/book/book.entity";
 
 define(Book, (faker: typeof Faker) => {
   const book = new Book();

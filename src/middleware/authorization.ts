@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { AppDataSource } from "../data-source";
-import { User } from "../entity/User.entity";
+import { User } from "../modules/user/User.entity";
 
 export const authorization = (roles: string[]) => {
   return async (req: Request, res: Response, next: NextFunction) => {
